@@ -29,8 +29,10 @@ header {
 
 
     top: 0; 
-      
+}
 
+h1{
+    text-align: center;
 }
 
 #boton-hamburguesa {
@@ -74,119 +76,130 @@ header {
     display: block;
 }
 
-
-
-.container {
-    max-width: 5px;
-    margin: 5px;
-    padding: 0 2px;
-    font-family: "Comfortaa";
-}
-
-h1 {
-    text-align: center;
-    font-size: 60px;
-    font-weight:bolder;
-    font-family: "Comfortaa";
-        
-}
-
-
-
-
-
-
-.products {
-    padding: 5px 0;
-    margin: 10%;
-
-}
-
-h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bolder;
-}
-
-
-.tarjet {
+.container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-    transition: all 0.4s;
-    padding: 0px;
-    margin: 0px;
-    
-}
+    grid-template-columns: (auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    gap: 400px;
 
-.carta-box {
-    margin: 100px;
-    width: 200px;
-    height: 250px;
-    position:relative;
+  }
+
+  .card-1 {
+    width: 500px;
+    height: 800px;
     perspective: 1000px;
   }
   
-  .carta-box:hover .carta {
-      transform: rotateY(180deg);
-      
-  }
-  
-  
-  .carta {
+  .card-1 .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
     transform-style: preserve-3d;
-    transition: all 0.5s linear;
+    transition: transform 0.999s;
   }
   
-  .cara {
-    position:absolute;
-    backface-visibility: hidden;
-    font-size:800px 100px ;
-    z-index: 2;
-  }
-  
-  .cara.detras {
+  .card-1:hover .card-inner {
     transform: rotateY(180deg);
-    background: linear-gradient(#c975bba8, #0088cc); 
-    text-align: center;
-
-    margin: 0 0;
-    padding: 10px;
- 
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    backface-visibility: hidden;
+  }
+  
+  .card-1 .card-front {
+    background-color: #38e316;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #38e316;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-1 .card-back {
+    background-color: #f5e102;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #f5e102;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
   }
 
+  .card-2 {
+    width: 500px;
+    height: 800px;
+    perspective: 1000px;
+  }
+  
+  .card-2 .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card-2:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color: #F08A5D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #F08A5D;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+  
+  
 
 
-.product {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    
-}
 
-.product img {
-    width: 200px;
-    height: 320px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
+  
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    
-}
+  
 
 
+  
+  
+  
 
-.container{
-    max-width: 1200px;
-    margin: 5px;
-    padding-bottom: 3px;
-}
 
 .footer{
     background: linear-gradient(rgb(231, 211, 186), #000);

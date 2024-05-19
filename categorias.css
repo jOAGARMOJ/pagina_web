@@ -9,6 +9,10 @@ body {
     height: 100vh;
 }
 
+h1{
+    text-align: center;
+}
+
 header {
     
     background-color: #f0f0f0;
@@ -29,8 +33,6 @@ header {
 
 
     top: 0; 
-      
-
 }
 
 #boton-hamburguesa {
@@ -76,117 +78,64 @@ header {
 
 
 
-.container {
-    max-width: 5px;
-    margin: 5px;
-    padding: 0 2px;
-    font-family: "Comfortaa";
-}
 
-h1 {
-    text-align: center;
-    font-size: 60px;
-    font-weight:bolder;
-    font-family: "Comfortaa";
-        
-}
-
-
-
-
-
-
-.products {
-    padding: 5px 0;
-    margin: 10%;
-
-}
-
-h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bolder;
-}
-
-
-.tarjet {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 5px;
-    transition: all 0.4s;
-    padding: 0px;
-    margin: 0px;
-    
-}
-
-.carta-box {
-    margin: 100px;
-    width: 200px;
-    height: 250px;
-    position:relative;
-    perspective: 1000px;
+.palette {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+   font-family: "comfortaa";
   }
   
-  .carta-box:hover .carta {
-      transform: rotateY(180deg);
-      
+  .color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
   }
   
-  
-  .carta {
-    transform-style: preserve-3d;
-    transition: all 0.5s linear;
+  .color span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
   }
   
-  .cara {
-    position:absolute;
-    backface-visibility: hidden;
-    font-size:800px 100px ;
-    z-index: 2;
+  .color:nth-child(1) {
+    background: #264653;
+   
   }
   
-  .cara.detras {
-    transform: rotateY(180deg);
-    background: linear-gradient(#c975bba8, #0088cc); 
-    text-align: center;
-
-    margin: 0 0;
-    padding: 10px;
- 
+  .color:nth-child(2) {
+    background: #2a9d8f;
   }
-
-
-
-.product {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    
-}
-
-.product img {
-    width: 200px;
-    height: 320px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    
-}
-
-
-
-.container{
-    max-width: 1200px;
-    margin: 5px;
-    padding-bottom: 3px;
-}
+  
+  .color:nth-child(3) {
+    background: #e9c46a;
+  }
+  
+  .color:nth-child(4) {
+    background: #f4a261;
+  }
+  
+  .color:nth-child(5) {
+    background: #e76f51;
+  }
+  
+  .color:hover {
+    flex: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .color:hover span {
+    opacity: 1;
+  }
 
 .footer{
     background: linear-gradient(rgb(231, 211, 186), #000);
